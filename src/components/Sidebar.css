@@ -1,0 +1,30 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    /* background-color: aquamarine; */
+    border-right: 1px solid #EFF2F7;
+    font-size: 1em;
+}
+.sidebar .links {
+    margin-top: 5em;
+}
+.sidebar .links li {
+    margin-top: 0.71em;
+}
+.sidebar .links a {
+    display: flex;
+    align-items: center;
+    padding: 0.71em 0;
+    text-decoration: none;
+    width: 100%;   
+}
+.sidebar .links img, .sidebar .help-center img {
+    margin-right: 0.71em;
+    /* filter: invert(100%); */
+}
+.sidebar .help-center{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
