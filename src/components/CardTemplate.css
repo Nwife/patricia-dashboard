@@ -1,0 +1,73 @@
+.cardone{
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    height: 12.57em;
+    min-width: 20.4em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+.card-template .cardone:hover{
+    transform: scale(0.9);
+}
+.card-icons{
+    display: flex;
+    justify-content: space-between;
+}
+.card-balance{
+    display: flex;
+    align-items: center;
+}
+.card-no{
+    width: max-content;
+}
+.card-balance small{
+    font-size: 10px;
+    margin-right: 10px;
+}
+.card-holder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-holder p:first-child, .card-valid p{
+    font-size: 12px;
+}
+.card-valid{
+    display: flex;
+    align-items: center;
+}
+.card-valid-thru{
+    line-height: 0.9;
+    font-size: 12px;
+    margin-right: 0.71em;
+}
+.card-valid small{
+    font-size: 9px;
+}
+.card-cvv{
+    font-size: 8px;
+}
+.card-cvv span:first-child{
+    margin-right: 5px;
+}
+.card-template .card-icons .eyeicon:hover{
+    filter: invert(40%);
+}
+.blur{
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    height: 13.57em;
+    min-width: 21.4em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    filter: blur(4px);
+}

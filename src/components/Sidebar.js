@@ -3,18 +3,12 @@
 //styles and icons
 import './Sidebar.css';
 import PatriciaLogo from '../assets/patricia_logo.svg';
-import ActivityIcon from '../assets/Activity.svg';
-import CategoryIcon from '../assets/Category.svg';
-import GiftIcon from '../assets/Mask.svg';
-import ProductIcon from '../assets/Product.svg';
-import WalletIcon from '../assets/Wallet.svg';
 import HelpIcon from '../assets/help.svg';
 
 
 export default function Sidebar() {
   return (
-    <div className='sidebar'>
-       
+    <div className='sidebar'>     
             <div className="logo">
                 <img src={PatriciaLogo} alt="patricia logo" />
             </div>
@@ -23,31 +17,44 @@ export default function Sidebar() {
                 <ul>
                     <li>
                         <a href="/">
-                            <img src={CategoryIcon} alt="dashboard icon" />
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlinkHref="/sprite.svg#category"></use>
+                            </svg>
                             <span>Dashboard</span>
                         </a>
                     </li>
                     <li>
                         <a href='/'>
-                            <img src={ActivityIcon} alt="activity icon" />
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlinkHref="/sprite.svg#activity"></use>
+                            </svg>
                             <span>Activity</span>
                         </a>
                     </li>
                     <li>
                         <a href='/'>
-                            <img src={WalletIcon} alt="wallet icon" />
+                            {/* <img src={WalletIcon} alt="wallet icon" /> */}
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlinkHref="/sprite.svg#wallet"></use>
+                            </svg>
                             <span>Wallet</span>
                         </a>
                     </li>
                     <li>
                         <a href='/'>
-                            <img src={ProductIcon} alt="product icon" />
+                            {/* <img src={ProductIcon} alt="product icon" /> */}
+                            <svg width="18" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlinkHref="/sprite.svg#product"></use>
+                            </svg>
                             <span>Products</span>
                         </a>
                     </li>
                     <li>
                         <a href='/'>
-                            <img src={GiftIcon} alt="gift icon" />
+                            {/* <img src={GiftIcon} alt="gift icon" /> */}
+                            <svg width="18" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlinkHref="/sprite.svg#gift"></use>
+                            </svg>
                             <span>Referrals</span>
                         </a>
                     </li>
@@ -56,8 +63,7 @@ export default function Sidebar() {
             <div className="help-center">
                 <img src={HelpIcon} alt="gift icon" />
                 <span>Help center</span>
-            </div>
-      
+            </div>   
     </div>
   )
 }

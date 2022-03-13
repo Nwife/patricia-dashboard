@@ -1,0 +1,51 @@
+.activity-list{
+    background: #fff;
+    padding: 1.64em;
+    padding-bottom: 0.35em;
+    margin-top: 4.5em;
+    border-radius: 24px;
+}
+.recent-activity{
+    display: flex;
+    align-items: center;
+}
+.recent-activity p{
+    margin-right: auto;
+    color: #9DA8B6;
+}
+.recent-activity .date{
+    display: flex;
+    align-items: center;
+    background: #F9FAFC;
+    padding: 0.64em;
+    border-radius: 8px;
+    color: #9DA8B6;
+    margin-right: 0.71em;
+}
+.recent-activity .date img{
+    margin-right: 0.7em;
+}
+.activity-list .list{
+    margin-top: 0.9em;
+}
+.activity-list .name, .activity-list .price, .activity-list .time{
+    color: #575A65;
+}
+.activity-list .price, .activity-list .time{
+    color: #9DA8B6;
+}
+.activity-list .time{
+    font-size: 0.85em;
+}
+.activity-name{
+    display: flex;
+}
+.activity-name img{
+    margin-right: 1.14em;
+}
+.activity-company{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.64em;
+}
