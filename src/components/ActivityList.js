@@ -4,7 +4,6 @@ import CalendarIcon from '../assets/Calendar.svg';
 import DownloadIcon from '../assets/Download.svg'
 
 export default function ActivityList({ company }) {
-    
   return (
     <div className='activity-list'>
         <div className="recent-activity">

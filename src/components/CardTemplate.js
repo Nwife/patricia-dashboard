@@ -21,7 +21,8 @@ export default function CardTemplate({card}) {
                 style={
                     {backgroundImage: `url(${card.background})`, 
                     backgroundColor: `${card.bgcolor}`, 
-                    color: `${card.color}`}
+                    color: `${card.color}`
+                    }
                 }>
                 <div className="card-icons">
                     <img src={PatricaCard} alt="" />

@@ -42,7 +42,6 @@ export default function Sidebar() {
                     </li>
                     <li>
                         <a href='/'>
-                            {/* <img src={ProductIcon} alt="product icon" /> */}
                             <svg width="18" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <use xlinkHref="/sprite.svg#product"></use>
                             </svg>

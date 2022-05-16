@@ -41,7 +41,8 @@
 .cards-slider-wrap{
     margin-top: 1.93em;
     display: flex;
-    max-width: 720px;
+    /* max-width: 720px; */
+    width: 45em;
     overflow: scroll;
 }
 .cards-slider-btn{
