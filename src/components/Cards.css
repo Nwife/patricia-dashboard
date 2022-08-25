@@ -37,6 +37,9 @@
     border-radius: 8px;
     background-color: #FFCE00;
 }
+.cards .card-btn button:hover{
+    background-color: #fddb56;
+}
 /*card slider*/
 .cards-slider-wrap{
     margin-top: 1.93em;
@@ -56,13 +59,19 @@
     background-color: transparent;
 }
 .cards-slider-btn button:nth-child(1){
-    border: 1px solid #006516;
-    color: #006516;
+    background-color: #3fa495;
+    color: #fff;
     margin-right: 1.14em;
 }
 .cards-slider-btn button:nth-child(2){
     border: 1px solid #CC4945;
     color: #CC4945;
+    transition: background-color .1s ease-in;
+    transition: color .1s ease-in;
+}
+.cards-slider-btn button:nth-child(2):hover{
+    background-color: #CC4945;
+    color: #fff;
 }
 .card-info{
     padding: 1.71em;
@@ -106,6 +115,8 @@
     -webkit-appearance: none;
     width: 0px;
 }
+
+
 /*responsive*/
 @media(max-width: 1000px){
     .cards-slider-wrap {

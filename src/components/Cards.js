@@ -1,19 +1,38 @@
 import { useState } from 'react';
 import CardTemplate from './CardTemplate'
+
 //styles and icons
 import './Cards.css';
 import LeftIcon from "../assets/left.svg";
 import PhotoIcon from "../assets/photo.svg";
 import DownIcon from "../assets/dropdown.svg";
 
+//components
+import AddCard from './AddCard';
+import DeleteCard from './DeleteCard';
+
+//redux
+import { useSelector } from 'react-redux';
+
 
 export default function Cards() {
-  const [card, useCard] = useState([
-    { cardno: '7545 7545 7545 7545', balance: '$2000', name: 'Amaeze Ife', valid: '10/12', bgcolor: '#1d1e2c', color: '#fff', background: '/card/card-bg.svg' },
-    { cardno: '4111 9854 9484 7439', balance: '$9800', name: 'Amaeze Izu', valid: '04/21', bgcolor: '#DEF5F2', color: '#000', background: '/card/card-bgtwo.svg'},
-    { cardno: '1653 7098 7839 0922', balance: '$1372.98', name: 'Patrcia Boy', valid: '10/12', bgcolor: '#1d1e2c', color: '#fff', background: '/card/card-bg.svg' },
-    { cardno: '4111 9854 9484 7439', balance: '$400', name: 'Good Kid', valid: '04/21', bgcolor: '#DEF5F2', color: '#000', background: '/card/card-bgtwo.svg'}
-  ])
+  const card = useSelector((state) => state.card);
+
+  const [cardModal, setCardModal] = useState(false);
+  const [deleteModal, setDeleteModal] = useState(false);
+
+  // const closeCardModal = () => {
+  
+  // }
+
+  console.log(">>>", card)
+
+  // const [card, useCard] = useState([
+  //   { cardno: '7545 7545 7545 7545', balance: '$2000', name: 'Amaeze Ife', valid: '10/12', bgcolor: '#1d1e2c', color: '#fff', background: '/card/card-bg.svg' },
+  //   { cardno: '4111 9854 9484 7439', balance: '$9800', name: 'Amaeze Izu', valid: '04/21', bgcolor: '#DEF5F2', color: '#000', background: '/card/card-bgtwo.svg'},
+  //   { cardno: '1653 7098 7839 0922', balance: '$1372.98', name: 'Patrcia Boy', valid: '10/12', bgcolor: '#1d1e2c', color: '#fff', background: '/card/card-bg.svg' },
+  //   { cardno: '4111 9854 9484 7439', balance: '$400', name: 'Good Kid', valid: '04/21', bgcolor: '#DEF5F2', color: '#000', background: '/card/card-bgtwo.svg'}
+  // ])
 
   return (
     <div className='cards'>
@@ -31,20 +50,22 @@ export default function Cards() {
             </div>
           </div>
           <div className="card-btn">
-            <button>Create New Card</button>
+            <button onClick={() => setCardModal(true)}>Create New Card</button>
           </div>
         </div>
 
         <div className="cards-slider">
           <div className="cards-slider-wrap">
             {card.map(card => (
-              <CardTemplate card={card} key={Math.random()}/>
+              <CardTemplate card={card} key={card.id}/>
             ))}
           </div>
+          {card.length > 0 &&
           <div className="cards-slider-btn">
-            <button>Freeze Card</button>
-            <button>Delete Card</button>
+            <button disabled>Freeze Card</button>
+            <button onClick={() => setDeleteModal(true)}>Delete Card</button>
           </div>
+          }
         </div>
 
         <div className="card-info">
@@ -69,9 +90,8 @@ export default function Cards() {
           </div>
         </div>
       </div>
-
-      
-
+      {cardModal && <AddCard setCardModal={setCardModal} />}
+      {deleteModal && <DeleteCard setDeleteModal={setDeleteModal} />}
     </div>
   )
 }

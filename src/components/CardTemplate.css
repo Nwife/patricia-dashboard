@@ -71,3 +71,6 @@
     background-repeat: no-repeat;
     filter: blur(4px);
 }
+.eyeicon:hover{
+    cursor: pointer;
+}

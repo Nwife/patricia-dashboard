@@ -1,0 +1,122 @@
+.addcard{
+    position: fixed;
+    top: 0;
+    display: flex;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.addcard-content{
+    padding: 54px 77px;
+    background: #F1F2F3;
+    width: 50%;
+    border-radius: 3px;
+}
+.addcard-content-close{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addcard-content-close img:hover{
+    cursor: pointer;
+}
+.addcard-form{
+    margin-top: 25px;
+}
+.addcard-content h2{
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #444854;
+    
+}
+.addcard-form span{
+    display: block;
+    margin-bottom: 12px;
+    color: #8D8F95;
+}
+.addcard-form input, .addcard-form select{
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    color: #575A65;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+.addcard-form input:focus,
+.addcard-form select:focus{
+    outline: none;
+    border: 1px solid #bae3de;
+}
+.addcard-form label{
+    flex: 1;
+    margin-bottom: 20px;
+}
+/* #bg-color{
+    width: 40%;
+} */
+.input-contain{
+    display: flex;
+    gap: 30px;
+}
+.input_container{
+    position: relative;
+}
+.input_container img{
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    transform: translateY(-50%);
+}
+.addcard-form button{
+    background-color: #006156;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 8px;
+    padding: 13px 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+input::placeholder{
+    font-weight: 400;
+    color: rgba(167, 159, 159, 0.4);
+    font-family: inherit;
+}
+select:required:invalid {
+    color: rgba(167, 159, 159, 0.4);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+@media(max-width: 1130px){
+    .addcard-content{
+        width: 75%;
+    }
+}
+@media(max-width: 790px){
+    .input-contain{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .addcard-content{
+        width: 85%;
+        max-height: 70%;
+        overflow-y: scroll;
+        padding: 30px 55px;
+    }
+    .addcard-form{
+        margin-top: 15px;
+    }
+}
+@media(max-width: 550px){
+    .addcard-content{
+        padding: 30px;
+    }
+}

@@ -1,0 +1,81 @@
+.deletecard{
+    position: fixed;
+    top: 0;
+    display: flex;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.deletecard-content{
+    padding: 30px 30px 45px;
+    background: #F1F2F3;
+    width: 50%;
+    border-radius: 3px;
+}
+.deletecard-content h2{
+    font-weight: 900;
+    font-size: 24px;
+    color: #444854;
+}
+.deletecard-content-close{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.deletecard-content-close img{
+    cursor: pointer;
+}
+.deletecard-container p{
+    font-size: 1.1rem;
+    margin-top: 15px;
+    color: #8D8F95;
+    margin-bottom: 9px;
+}
+.deletecard-container select{
+    width: 50%;
+    display: block;
+    font-size: 15px;
+    color: #575A65;
+    padding: 14px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+.deletecard-container .input_container img{
+    left: 43%;
+}
+.deletecard-form select:focus{
+    outline: none;
+    border: 1px solid #EFC9C8;
+}
+.deletecard-form button{
+    background-color: #CC4945;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 13px 30px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+@media(max-width: 770px){
+    .deletecard-content,
+    .deletecard-container select{
+        width: 70%;
+    }
+    .deletecard-container .input_container img{
+        left: 63%;
+    }
+}
+@media(max-width: 650px){
+    .deletecard-content{
+        width: 85%;
+    }
+    .deletecard-container select{
+        width: 90%;
+    }
+    .deletecard-container .input_container img{
+        left: 73%;
+    }
+}

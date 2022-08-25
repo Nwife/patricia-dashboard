@@ -14,3 +14,17 @@ ul {
   list-style-type: none;
 }
 
+*{
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+button{
+  cursor: pointer;
+}

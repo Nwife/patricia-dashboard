@@ -31,7 +31,7 @@ export default function CardTemplate({card}) {
                 <div className="card-no">{card.cardno}</div>
                 <div className="card-balance">
                     <small>BALANCE</small>
-                    <p>{card.balance}</p>
+                    <p>${card.balance}</p>
                 </div>
                 <div className="card-holder">
                     <p>{card.name}</p>
